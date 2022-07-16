@@ -1,0 +1,26 @@
+{
+  "short_name": "Enbuild",
+  "name": "Enbuild",
+  "icons": [
+    {
+      "src": "./images/512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "./images/192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./images/144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./login",
+  "display": "standalone",
+  "theme_color": "#2E86AB",
+  "background_color": "#2E86AB",
+  "gcm_sender_id": "609490234826"
+}

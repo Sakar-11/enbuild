@@ -1,0 +1,10 @@
+{
+  "jwtSecret": "BOYCOTT_CHINA",
+  "mongoAtlas": "mongodb+srv://sakar:SakarDora@enbuild.ffe6y.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "mongoURI": "mongodb://127.0.0.1:27017",
+  "adminUser": "",
+  "adminPass": "",
+  "backendURL": "https://enbuild.in/api",
+  "encryptKey": "coronaCulpritChina",
+  "fcm": "AAAAjehy7co:APA91bGRE5wkFJ-Mt9rE0SHYfZOkDahW4tlhQWk64leNb7pNngqQrUAsC7HI9UU-yjJXZtSFxhEDKMyhZiE7GGktqEMBD7KRJjyxFb1Bhiy-hwdx_MxpCH7gDFPQwVUlh3cJbCG3b542"
+}
