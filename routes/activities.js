@@ -11,7 +11,6 @@ router.route("/getDefaultActivities/:projectId").get(async (req, res) => {
   const projectId = req.params.projectId;
   try {
     let defaultActivities = await DefaultActivities.findOne({ projectId });
-
     return res.status(200).json(defaultActivities);
   } catch (error) {
     res.status(400).send({ error: error.message });
@@ -293,7 +292,6 @@ router
 
       defaultActivities.forEach((activity) => {
         if (activities) {
-          accName.push(activity.title);
           let subactivityPer = [];
           let tempPer = 0.0;
           activity.content.forEach((subacc) => {
@@ -308,6 +306,10 @@ router
             }
             // console.log(subacc.visibility);
           });
+          accName.push(activity.title);
+          if (!activity.visibility) {
+            percentage.push(0.0);
+          }
           if (activity.visibility) {
             percentage.push(tempPer / subactivityPer.length);
           }

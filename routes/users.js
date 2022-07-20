@@ -87,7 +87,7 @@ router.post("/removeNotificationId", async (req, res) => {
           if (err) {
             return res.status(400).json(err);
           } else {
-            // console.log("SUCCESS");
+            console.log("SUCCESS");
           }
         });
       }

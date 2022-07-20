@@ -464,14 +464,14 @@ const removeProjectFromUser = async (users, projectId) => {
       // console.log(user);
       user = JSON.stringify(user);
       user = JSON.parse(user);
+      console.log(user);
       var temp = user.projects;
       var index = temp.findIndex((item) => item.project == projectId);
-      // console.log(index);
       if (index === -1) {
         return;
       }
       // console.log(temp);
-      temp.splice(index, 1);
+      if (!user.isAdmin || !user.mainAdmin) temp.splice(index, 1);
       // console.log(temp);
       const response = await UserLogins.findByIdAndUpdate(item.user, {
         $set: {
