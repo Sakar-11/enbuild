@@ -221,9 +221,10 @@ router.route("/getUpdateDetails").get(async (req, res) => {
   const { randomid } = req.query;
   var activityFound = await ActivityUpdates.findOne({ randomid });
   try {
-    // console.log("ss", activityFound);
     if (activityFound) {
       return res.status(200).send(activityFound);
+    } else {
+      return res.status(200).send(data = ['No Activities']);
     }
   } catch (error) {
     res.status(400).send({ error: error });
